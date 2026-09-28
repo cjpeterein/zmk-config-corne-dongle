@@ -8,6 +8,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+// Key positions
+// -----------------------------------------------------------------------------------------
+// |  0   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  | 10  |  11  |
+// |  12  | 13  | 14  | 15  | 16  | 17  |   | 18  | 19  | 20  | 21  | 22  |  23  |
+// |  24  | 25  | 26  | 27  | 28  | 29  |   | 30  | 31  | 32  | 33  | 34  |  35  |
+//                    | 36  | 37  | 38  |   | 39  | 40  | 41  |
+
 / {
     behaviors {
         // Same-hand keys pressed within the tapping term resolve as taps, so rolls don't fire mods
@@ -44,29 +51,29 @@
             // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
             // |  `   | A/G | S/A | D/C | F/S |  G  |   |  H  | J/S | K/C | L/A | ;/G |  '   |
             // |  -   |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  \   |
-            //                    | GUI | ESC | ENT |   | SPC | TO1 | DEL |
+            //                    | CW  | ESC | ENT |   | SPC | TO1 | DEL |
 
             display-name = "base";
             bindings = <
 &kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T      &kp Y      &kp U         &kp I         &kp O        &kp P           &kp BSPC
 &kp GRAVE  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G      &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 &kp MINUS  &kp Z        &kp X        &kp C         &kp V         &kp B      &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp BACKSLASH
-                                     &kp LGUI      &kp ESC       &kp ENTER  &kp SPACE  &to 1         &kp DEL
+                                     &caps_word    &kp ESC       &kp ENTER  &kp SPACE  &to 1         &kp DEL
             >;
         };
 
         symbol_layer {
             // -----------------------------------------------------------------------------------------
-            // |      |  !  |  @  |  #  |  [  |  ]  |   |  +  |  7  |  8  |  9  |  *  | BKSP |
-            // |      | $/G | %/A | ^/C | (/S |  )  |   |  -  | 4/S | 5/C | 6/A | //G |  =   |
-            // |      |  &  |  <  |  >  |  {  |  }  |   |  0  |  1  |  2  |  3  |  ?  |  \   |
+            // |      |  !  |  @  |  #  |  [  |  ]  |   |  =  |  7  |  8  |  9  |  -  | BKSP |
+            // |      | $/G | %/A | ^/C | (/S |  )  |   |  .  | 4/S | 5/C | 6/A | +/G |  *   |
+            // |      |  &  |  <  |  >  |  {  |  }  |   |  0  |  1  |  2  |  3  |  /  |      |
             //                    |     | TO0 |     |   |     | TO2 |     |
 
             display-name = "sym|num";
             bindings = <
-&trans  &kp EXCL          &kp AT             &kp HASH          &kp LBKT                     &kp RBKT               &kp PLUS   &kp N7         &kp N8         &kp N9        &kp STAR        &kp BSPC
-&trans  &hml LGUI DOLLAR  &hml LALT PERCENT  &hml LCTRL CARET  &hml LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &hmr RSHFT N4  &hmr RCTRL N5  &hmr RALT N6  &hmr RGUI FSLH  &kp EQUAL
-&trans  &kp AMPERSAND     &kp LESS_THAN      &kp GREATER_THAN  &kp LEFT_BRACE               &kp RIGHT_BRACE        &kp N0     &kp N1         &kp N2         &kp N3        &kp QUESTION    &kp BACKSLASH
+&trans  &kp EXCL          &kp AT             &kp HASH          &kp LBKT                     &kp RBKT               &kp EQUAL  &kp N7         &kp N8         &kp N9        &kp MINUS       &kp BSPC
+&trans  &hml LGUI DOLLAR  &hml LALT PERCENT  &hml LCTRL CARET  &hml LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOT    &hmr RSHFT N4  &hmr RCTRL N5  &hmr RALT N6  &hmr RGUI PLUS  &kp STAR
+&trans  &kp AMPERSAND     &kp LESS_THAN      &kp GREATER_THAN  &kp LEFT_BRACE               &kp RIGHT_BRACE        &kp N0     &kp N1         &kp N2         &kp N3        &kp FSLH        &trans
                                              &trans            &to 0                        &trans                 &trans     &to 2          &trans
             >;
         };
