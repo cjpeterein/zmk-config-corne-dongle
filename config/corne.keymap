@@ -69,7 +69,7 @@
             // |      |  &  |  <  |  >  |  {  |  }  |   |  0  |  1  |  2  |  3  |  /  |      |
             //                    |     | TO0 |     |   |     | TO2 |     |
 
-            display-name = "sym|num";
+            display-name = "sym.num";
             bindings = <
 &trans  &kp EXCL          &kp AT             &kp HASH          &kp LBKT                     &kp RBKT               &kp EQUAL  &kp N7         &kp N8         &kp N9        &kp MINUS       &kp BSPC
 &trans  &hml LGUI DOLLAR  &hml LALT PERCENT  &hml LCTRL CARET  &hml LSHFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOT    &hmr RSHFT N4  &hmr RCTRL N5  &hmr RALT N6  &hmr RGUI PLUS  &kp STAR
@@ -85,7 +85,7 @@
             // |      | F9  | F10 | F11 | F12 |     |   | PSCR|     |     |     | MUTE|      |
             //                    |     | TO0 |     |   |     | TO3 |     |
 
-            display-name = "fun|nav";
+            display-name = "fun.nav";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3         &kp F4         &trans  &kp HOME         &kp PG_DN  &kp PG_UP  &kp END    &kp C_VOLUME_UP    &trans
 &trans  &hml LGUI F5  &hml LALT F6  &hml LCTRL F7  &hml LSHFT F8  &trans  &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT  &kp C_VOLUME_DOWN  &trans
