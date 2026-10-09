@@ -1,0 +1,15 @@
+// The halves are split peripherals, so they only know the active layer and
+// the other half's battery if the dongle relays them over this channel
+/ {
+    asdc0: split_data_channel {
+        compatible = "zmk,arbitrary-split-data-channel";
+        channel-id = <1>;
+        status = "okay";
+    };
+
+    split_status_relay {
+        compatible = "zmk,split-status-relay";
+        asdc-channel = <&asdc0>;
+        status = "okay";
+    };
+};
