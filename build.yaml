@@ -17,10 +17,10 @@ include:
     shield: corne_dongle
     snippet: studio-rpc-usb-uart
   - board: nice_nano//zmk
-    shield: corne_left nice_view_adapter nice_view
+    shield: corne_left nice_view_adapter nice_view_battery_peripheral
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano//zmk
-    shield: corne_right nice_view_adapter nice_view
+    shield: corne_right nice_view_adapter nice_view_battery_peripheral
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: xiao_ble//zmk
     shield: settings_reset

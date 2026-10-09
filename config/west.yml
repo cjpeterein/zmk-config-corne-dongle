@@ -2,10 +2,21 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: dmhuisma
+      url-base: https://github.com/dmhuisma
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: 5b51501fead672c41b5cfb396f3dafe0894bf4e9
       import: app/west.yml
+    - name: zmk_arbitrary_split_data_channel
+      remote: dmhuisma
+      revision: 70a04e117b000a93226bff00eddfb5c48c1b96a3
+    - name: zmk-split-status-relay
+      remote: dmhuisma
+      revision: 5ce0f26e600436e6256efec8989b032b2f6451af
+    - name: nice-view-battery-peripheral
+      remote: dmhuisma
+      revision: 0ad2456298fb40826ca729b8b0b0c2f4e920dc97
   self:
     path: config
