@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: dmhuisma
       url-base: https://github.com/dmhuisma
+    - name: cjpeterein
+      url-base: https://github.com/cjpeterein
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,8 +17,8 @@ manifest:
     - name: zmk-split-status-relay
       remote: dmhuisma
       revision: 5ce0f26e600436e6256efec8989b032b2f6451af
-    - name: nice-view-battery-peripheral
-      remote: dmhuisma
-      revision: 53473ce20630a9b30c14c2cda04c70023cdf6101
+    - name: zmk-split-display-view
+      remote: cjpeterein
+      revision: a1c824c18bf7f0c1b6c19c9356824120dd2ea85a
   self:
     path: config
