@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: dmhuisma
-      url-base: https://github.com/dmhuisma
     - name: cjpeterein
       url-base: https://github.com/cjpeterein
   projects:
@@ -11,14 +9,8 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk_arbitrary_split_data_channel
-      remote: dmhuisma
-      revision: 70a04e117b000a93226bff00eddfb5c48c1b96a3
-    - name: zmk-split-status-relay
-      remote: dmhuisma
-      revision: 5ce0f26e600436e6256efec8989b032b2f6451af
     - name: zmk-split-display-view
       remote: cjpeterein
-      revision: a1c824c18bf7f0c1b6c19c9356824120dd2ea85a
+      revision: 2cb2473d4632d42c1f63fe911b8656799fae9451
   self:
     path: config
