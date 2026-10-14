@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-split-display-view
       remote: cjpeterein
-      revision: v0.1
+      revision: main
   self:
     path: config
