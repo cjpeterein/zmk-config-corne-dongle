@@ -107,14 +107,14 @@
             // -----------------------------------------------------------------------------------------
             // |      | F1  | F2  | F3  | F4  |     |   | HOME| PGDN| PGUP| END | VOL+|      |
             // |      | F5/G| F6/A| F7/C| F8/S|     |   | LFT | DWN | UP  | RGT | VOL-|      |
-            // |      | F9  | F10 | F11 | F12 |     |   | PSCR|     | INS |     | MUTE|      |
+            // |      | F9  | F10 | F11 | F12 |     |   | PSCR| INS |     |     | MUTE|      |
             //                    |     | TO0 |     |   |     | TO3 | DEL |
 
             display-name = "fun.nav";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3         &kp F4         &trans  &kp HOME         &kp PG_DN  &kp PG_UP  &kp END    &kp C_VOLUME_UP    &trans
 &trans  &hml LGUI F5  &hml LALT F6  &hml LCTRL F7  &hsl LSHFT F8  &trans  &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT  &kp C_VOLUME_DOWN  &trans
-&trans  &kp F9        &kp F10       &kp F11        &kp F12        &trans  &kp PRINTSCREEN  &trans     &kp INS    &trans     &kp C_MUTE         &trans
+&trans  &kp F9        &kp F10       &kp F11        &kp F12        &trans  &kp PRINTSCREEN  &kp INS    &trans     &trans     &kp C_MUTE         &trans
                                     &trans         &to 0          &trans  &trans           &to 3      &kp DEL
             >;
         };
