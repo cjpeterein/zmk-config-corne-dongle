@@ -75,14 +75,14 @@
             // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
             // |  `   | A/G | S/A | D/C | F/S |  G  |   |  H  | J/S | K/C | L/A | ;/G |  '   |
             // |  -   |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  \   |
-            //                    | CW  | ESC | SPC |   | ENT | TO1 | DEL |
+            //                    | CW  | ESC | ENT |   | SPC | TO1 | DEL |
 
             display-name = "base";
             bindings = <
-&kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T    &kp Y      &kp U         &kp I         &kp O        &kp P           &kp BSPC
-&kp GRAVE  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hsl LSHFT F  &kp G    &kp H      &hsr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-&kp MINUS  &kp Z        &kp X        &kp C         &kp V         &kp B    &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp BACKSLASH
-                                     &caps_word    &kp ESC       &kp SPC  &kp ENTER  &to 1         &kp DEL
+&kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T      &kp Y    &kp U         &kp I         &kp O        &kp P           &kp BSPC
+&kp GRAVE  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hsl LSHFT F  &kp G      &kp H    &hsr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
+&kp MINUS  &kp Z        &kp X        &kp C         &kp V         &kp B      &kp N    &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp BACKSLASH
+                                     &caps_word    &kp ESC       &kp ENTER  &kp SPC  &to 1         &kp DEL
             >;
         };
 
@@ -107,30 +107,30 @@
             // |      | F1  | F2  | F3  | F4  |     |   | HOME| PGDN| PGUP| END | VOL+|      |
             // |      | F5/G| F6/A| F7/C| F8/S|     |   | LFT | DWN | UP  | RGT | VOL-|      |
             // |      | F9  | F10 | F11 | F12 |     |   | PSCR| INS |     |     | MUTE|      |
-            //                    |     | TO0 |     |   |     | TO3 | DEL |
+            //                    |     | TO0 |     |   |     | TO0 | TO3 |
 
             display-name = "fun.nav";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3         &kp F4         &trans  &kp HOME         &kp PG_DN  &kp PG_UP  &kp END    &kp C_VOLUME_UP    &trans
 &trans  &hml LGUI F5  &hml LALT F6  &hml LCTRL F7  &hsl LSHFT F8  &trans  &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT  &kp C_VOLUME_DOWN  &trans
 &trans  &kp F9        &kp F10       &kp F11        &kp F12        &trans  &kp PRINTSCREEN  &kp INS    &trans     &trans     &kp C_MUTE         &trans
-                                    &trans         &to 0          &trans  &trans           &to 3      &kp DEL
+                                    &trans         &to 0          &trans  &trans           &to 0      &to 3
             >;
         };
 
         game_layer {
             // -----------------------------------------------------------------------------------------
             // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
-            // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
-            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  \   |
-            //                    | ALT | ESC | SPC |   | ENT | TO0 | DEL |
+            // | SHFT |  A  |  S  |  D  |  F  |  6  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
+            // | CTRL |  1  |  2  |  3  |  4  |  5  |   |  N  |  M  |  ,  |  .  |  /  |  \   |
+            //                    | ALT | ESC | SPC |   | ENT | TO0 | TO2 |
 
             display-name = "game";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R    &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F    &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V    &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                         &kp LALT  &kp ESC  &kp SPACE  &kp ENTER  &to 0  &kp DEL
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F    &kp N6     &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp N1 &kp N2 &kp N3    &kp N4   &kp N5     &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                         &kp LALT  &kp ESC  &kp SPC    &kp ENTER  &to 0  &to 2
             >;
         };
     };
